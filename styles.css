@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+/*Reset CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Estilos básicos para el menú header */
+h1, h2, h3, p {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #fff;
+    font-size: 1em;
+}
+
+body {
+    background-color: rgb(41, 47, 54);
+}
+
+nav {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.767), transparent);
+    padding: 1.5em 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav_h1 {
+    font-size: 1.3em;
+    align-items: center;
+}
+
+nav ul {
+    font-family: 'IBM Plex Mono', monospace;
+    list-style: none;
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 0.1em;
+    background-color: rgb(12, 204, 185);
+    transition: all 0.2s ease-in-out;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* Espaciado para el contenido debajo del menú */
+section {
+    height: 100vh; /* Agrega espacio en la parte superior */
+}
+#inicio{
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.74)), /* Filtro oscuro */
+        url('./assets/fondo-vectores.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inicio_descripcion {
+    padding: 2em;
+    margin-right: 5em;
+    border-top-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+    background-image: linear-gradient(to left, rgb(41, 47, 54), rgb(45, 57, 71)); /* Define el degradado */
+    height: 15em;
+    width: 50%;
+    font-size: 1em;
+}
+
+#h1_descripcion{
+    font-size: 2em;
+    margin: .5em 0em;
+    color: rgb(12, 204, 185);
+}
+strong{
+    color: rgb(12, 204, 185);
+}
+#h2_descripcion{
+    font-size: 1.4em;
+}
+#p_descripcion{
+    line-height: 23px;
+}
+#fotoPerfil {
+    height: 20em;
+    border: .1em solid transparent; 
+    border-radius: 20%;
+    background-image: linear-gradient(to bottom, rgb(12, 204, 185),rgb(7, 79, 72)); /* Define el degradado */
+    border-image: linear-gradient(to bottom, rgb(12, 204, 185), rgb(7, 79, 72)) 1; /* Aplica el degradado al borde */
+}
+
