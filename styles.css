@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /*Reset CSS*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,7 +48,7 @@ table {
 
 
 /* Estilos básicos para el menú header */
-h1, h2, h3, p {
+h1, h2, h3, p, figcaption {
     font-family: 'IBM Plex Mono', monospace;
     color: #fff;
     font-size: 1em;
@@ -109,13 +109,11 @@ nav ul li a:hover::after {
 
 
 /* Espaciado para el contenido debajo del menú */
-section {
+#aboutme, #proyectos{
     height: 100vh; /* Agrega espacio en la parte superior */
-}
-#inicio{
     background: 
-        linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.74)), /* Filtro oscuro */
-        url('./assets/fondo-vectores.jpg'); /* Imagen de fondo */
+    linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.67), rgba(41, 47, 54, 1)), /* Filtro oscuro */
+    url('./assets/fondo-vectores.jpg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;   
@@ -123,7 +121,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-#inicio_descripcion {
+#aboutme_descripcion {
     padding: 2em;
     margin-right: 5em;
     border-top-left-radius: 3em;
@@ -156,3 +154,96 @@ strong{
     border-image: linear-gradient(to bottom, rgb(12, 204, 185), rgb(7, 79, 72)) 1; /* Aplica el degradado al borde */
 }
 
+#skills, #hobbies, #formacion {
+    height: 50vh;
+}
+
+#h2_skills, #h2_hobbies{
+    text-align: center;
+    color: #63f0d1; /* Color turquesa */
+    font-family: 'Fira Sans', sans-serif; /* Fuente similar */
+    font-size: 2.5rem;
+    padding-top: 1.5em;
+}
+#h2_skills::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #63f0d1; 
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+#h2_hobbies::after {
+    content: "";
+    display: block;
+    width: 6em;
+    height: 3px;
+    background-color: #63f0d1; 
+    margin: 0.9rem auto 0;
+    border-radius: 2px;
+}
+#section-logos-skills, #section-logos-hobbies{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 10em;
+}
+#logo-skills{
+    height: 6em;
+}
+#figcaption-skills-logos{
+    text-align: center;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-formacion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 13em;
+}
+
+.card-formacion {
+    background-color: rgb(109, 235, 216); /* Color de fondo de las tarjetas */
+    border-radius: 8px;
+    height: 8em;
+    width: 15em;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.card-formacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #01adad; 
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.card-formacion h3 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: .5em;
+    color:rgb(2, 43, 41);
+}
+
+.card-formacion p {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.icon {
+    height: 3em;
+}
