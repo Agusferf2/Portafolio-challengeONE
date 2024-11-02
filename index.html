@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Menú</title>
+    <title>Portafolio</title>
     <link rel="stylesheet" href="styles.css"> 
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
 </head>
 <body>
     <header>
         <nav>
-            <h1 id="nav_h1"><strong>&lt;/&gt;</strong> Portafolio</h1>
+            <a id="nav_h1" href="#aboutme"><strong>&lt;/&gt;</strong> Portafolio</a>
 
             <ul>
                 <li><a href="#aboutme">Sobre mí</a></li>
@@ -28,7 +30,19 @@
         <div id="aboutme_descripcion">
             <h2 id="h2_descripcion">Agustín Fernandez</h2>
             <h1 id="h1_descripcion">Front-end developer</h1>
-            <p id="p_descripcion">Actualmente, me encuentro cursando el programa <strong> Oracle Next Education (ONE)</strong>, que me ha permitido seguir creciendo en el ámbito de la tecnología y adquirir habilidades prácticas para enfrentar desafíos reales. <br> A su vez estudio la tecnicatura en desarrollo de software en la <strong> Universidad Catolica de Cuyo</strong>. Me encanta aprender nuevas herramientas y técnicas para mejorar mis proyectos y ofrecer la mejor experiencia a los usuarios.</p>
+            <p id="p_descripcion">Soy de Argentina y tengo 19 años. Actualmente, estoy cursando el programa <strong>Oracle Next Education (ONE)</strong> y, al mismo tiempo, estudio la tecnicatura en desarrollo de software en la <strong>Universidad Católica de Cuyo</strong>. <br> Estas experiencias me han permitido crecer en el ámbito de la tecnología y adquirir <strong>habilidades prácticas</strong> para enfrentar desafíos reales. <br> Me considero una persona paciente y con facilidad para <strong>trabajar en equipo</strong>. Siempre estoy dispuesto a asumir riesgos y aprender algo nuevo.</p>
+            <div id="seccionbotones_descripcion">
+                <a href="https://github.com/Agusferf2" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github btn_descripcion"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/agustin-fernandez-29985a258/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin btn_descripcion"></i>
+                </a>
+                <a href="mailto:agusfer.dev:@gmail.com" aria-label="Correo Electrónico">
+                    <i class="fas fa-envelope btn_descripcion"></i>
+                </a>
+            </div>
+            
         </div>    
         <img id="fotoPerfil" src="./assets/fotoPerfil.jpg" alt="Foto de perfil">
     </section>
@@ -37,32 +51,32 @@
         <h2 id="h2_skills">Skills</h2>
         <div id="section-logos-skills">
             <figure>
-                <img id="logo-skills" src="./assets/logos/html-logo.png" alt="HTML">
-                <figcaption id="figcaption-skills-logos">HTML</figcaption>
+                <img class="logo-skills" src="./assets/logos/html-logo.png" alt="HTML">
+                <figcaption class="figcaption-skills-logos">HTML</figcaption>
             </figure>
             <figure>
-                <img id="logo-skills" src="./assets/logos/css-logo.png" alt="HTML" >
-                <figcaption id="figcaption-skills-logos">CSS</figcaption>
+                <img class="logo-skills" src="./assets/logos/css-logo.png" alt="HTML" >
+                <figcaption class="figcaption-skills-logos">CSS</figcaption>
             </figure>
             <figure>
-                <img id="logo-skills" src="./assets/logos/js-logo.png" alt="HTML" >
-                <figcaption id="figcaption-skills-logos">Javascript</figcaption>
+                <img class="logo-skills" src="./assets/logos/js-logo.png" alt="HTML" >
+                <figcaption class="figcaption-skills-logos">Javascript</figcaption>
             </figure>
             <figure>
-                <img id="logo-skills" src="./assets/logos/react-logo.png" alt="HTML">
-                <figcaption id="figcaption-skills-logos">React</figcaption>
+                <img class="logo-skills" src="./assets/logos/react-logo.png" alt="HTML">
+                <figcaption class="figcaption-skills-logos">React</figcaption>
             </figure>
             <figure>
-                <img id="logo-skills" src="./assets/logos/github-logo.png" alt="HTML">
-                <figcaption id="figcaption-skills-logos">Github</figcaption>
+                <img class="logo-skills" src="./assets/logos/github-logo.png" alt="HTML">
+                <figcaption class="figcaption-skills-logos">Github</figcaption>
             </figure>
             <figure>
-                <img id="logo-skills" src="./assets/logos/ingles-logo.png" alt="HTML">
-                <figcaption id="figcaption-skills-logos">Ingles B2</figcaption>
+                <img class="logo-skills" src="./assets/logos/ingles-logo.png" alt="HTML">
+                <figcaption class="figcaption-skills-logos">Ingles B2</figcaption>
             </figure>
         </div>
     </section>
-    <section id="hobbies">
+    <!-- <section id="hobbies">
         <h2 id="h2_hobbies">Hobbies y gustos</h2>
         <div id="section-logos-hobbies">
             <figure>
@@ -82,34 +96,97 @@
                 <figcaption id="figcaption-skills-logos">Ver peliculas</figcaption>
             </figure>
         </div>
-    </section>
+    </section> -->
     <section id="formacion">
         <h2 id="h2_hobbies">Formacion Academica</h2>
         <div id="section-formacion">
             <div class="card-formacion">
-                <img class="icon" src="./assets/logos/webinar.png" alt="">
-                <h3>ONE(Oracle + Alura)</h3>
-                <p>Formacion Front-End</p>
+                <div class="card-content">
+                    <img class="icon" src="./assets/logos/webinar.png" alt="">
+                    <h3>ONE(Oracle + Alura)</h3>
+                    <p>Formacion Front-End</p>
+                </div>
+                <div class="hover-text">¡En curso!</div>
             </div>
             <div class="card-formacion">
-                <img class="icon" src="./assets/logos/university.png" alt="">
-                <h3>Universidad Catolica de Cuyo</h3>
-                <p>Tecnicatura en Desarrollo de Software</p>
+                <div class="card-content">
+                    <img class="icon" src="./assets/logos/university.png" alt="">
+                    <h3>Universidad Catolica de Cuyo</h3>
+                    <p>Tecnicatura en Desarrollo de Software</p>
+                </div>
+                <div class="hover-text">¡En curso!</div>
             </div>
             <div class="card-formacion">
-                <img class="icon" src="./assets/logos/online-learning (1).png" alt=""> 
-                <h3>Yo puedo programar</h3>
-                <p>HTML • CSS • JS</p>
+                <div class="card-content">
+                    <img class="icon" src="./assets/logos/online-learning (1).png" alt=""> 
+                    <h3>Yo puedo programar</h3>
+                    <p>HTML • CSS • JS</p>
+                </div>
+                <div class="hover-text">¡Finalizado!</div>     
+            </div>
+        </div>
             </div>
         </div>
     </section>
     <section id="proyectos">
-        <h2>Proyectos</h2>
-        <p>Lista de proyectos...</p>
+        <h1 id="h1_proyectos">Proyectos</h1>
+        <p id="text-intro">Sumérgete en mi mundo de proyectos y tecnología. ¡Inspírate!</p>
+        <hr>
+        <div class="proyecto-card">
+                <img class="img-card" src="./assets/logos/post-encriptador.png" alt="Encriptadore img">
+            <div class="proyecto-descripcion">
+                <h2>Encriptador de texto</h2>
+                <p>Este desafio es una aplicación que encripta textos, así podrás intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada.</p>
+                <div class="proyecto-div-techcards">
+                    <span class="proyecto-techcards">HTML</span>
+                    <span class="proyecto-techcards">CSS</span>
+                    <span class="proyecto-techcards">Javascript</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="proyectos-buttons">
+            <a class="proyectos-buttons-github" target="_blank" href="https://github.com/Agusferf2/Encriptador-de-textos" >Github</a>
+            <a class="proyectos-buttons-demo" target="_blank" href="https://agusferf2.github.io/Encriptador-de-textos/">Demo</a>
+        </div>
+        <hr>
     </section>
     <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Formulario o información de contacto...</p>
+        <h1 id="h1-contacto">Contacto</h1>
+        <p id="p-contacto">Me comprometo a responderte lo antes posible. ¡Espero tu mensaje!</p>
+        
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Tu nombre</label>
+                <input type="text" id="name" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Tu email</label>
+                <input type="email" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Tu mensaje</label>
+                <textarea id="message" placeholder="Ingresa tu mensaje"></textarea>
+            </div>
+                <button class="message-button " type="submit">Enviame un mensaje</button>
+            
+        </form>
     </section>
+    <footer>
+        <div class="footer-content">
+            <p><strong>&lt;/&gt;</strong> Diseñado por Agustin Fernandez</p>
+            <div class="social-icons">
+                <a href="https://github.com/Agusferf2" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/agustin-fernandez-29985a258/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:agusfer.dev:@gmail.com" aria-label="Correo Electrónico">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
