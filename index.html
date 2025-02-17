@@ -150,7 +150,7 @@
             <a class="proyectos-buttons-demo" target="_blank" href="https://agusferf2.github.io/Encriptador-de-textos/">Demo</a>
         </div>
         <!-- Division proyecto -->
-         <br>
+        <br>
         <div class="proyecto-card">
             <img class="img-card" src="./assets/post-alurageek.png" alt="Encriptadore img">
         <div class="proyecto-descripcion">
@@ -163,10 +163,28 @@
             </div>
         </div>
     </div>
-
     <div class="proyectos-buttons">
         <a class="proyectos-buttons-github" target="_blank" href="https://github.com/Agusferf2/Challenge-AluraGeek" >Github</a>
         <a class="proyectos-buttons-demo" target="_blank" href="https://challenge-alura-geek-ruby.vercel.app/">Demo</a>
+    </div>
+    <!-- Division proyecto -->
+    <br>
+        <div class="proyecto-card">
+            <img class="img-card" src="./assets/post-electroshop.png" alt="Encriptadore img">
+        <div class="proyecto-descripcion">
+            <h2>Electro Shop</h2>
+            <p>Electro Shop es una plataforma de comercio electrónico dedicada a la venta de productos electrónicos. Los usuarios pueden explorar una amplia variedad de dispositivos, agregarlos a su carrito y completar su compra.</p>
+            <div class="proyecto-div-techcards">
+                <span class="proyecto-techcards">HTML</span>
+                <span class="proyecto-techcards">CSS</span>
+                <span class="proyecto-techcards">Javascript</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="proyectos-buttons">
+        <a class="proyectos-buttons-github" target="_blank" href="https://github.com/Agusferf2/Electro-Shop" >Github</a>
+        <a class="proyectos-buttons-demo" target="_blank" href="https://electro-shop-puce.vercel.app/">Demo</a>
     </div>
         <hr>
     </section>
@@ -174,22 +192,26 @@
         <h1 id="h1-contacto">Contacto</h1>
         <p id="p-contacto">Me comprometo a responderte lo antes posible. ¡Espero tu mensaje!</p>
         
-        <form class="contact-form">
+        <form class="contact-form" action="https://formsubmit.co/ae212a07d7f9035f844631ecae8218f0" method="POST">
             <div class="form-group">
                 <label for="name">Tu nombre</label>
-                <input type="text" id="name" placeholder="Ingresa tu nombre">
+                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre">
             </div>
             <div class="form-group">
                 <label for="email">Tu email</label>
-                <input type="email" id="email" placeholder="Ingresa tu email">
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
             </div>
             <div class="form-group full-width">
                 <label for="message">Tu mensaje</label>
-                <textarea id="message" placeholder="Ingresa tu mensaje"></textarea>
+                <textarea id="message" name="message" placeholder="Ingresa tu mensaje"></textarea>
             </div>
             <div class="form-group-button">
                 <button class="message-button " type="submit">Enviame un mensaje</button>
             </div>
+            <input type="hidden" name="_next" value="https://portafolio-challenge-one-one.vercel.app/">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
         </form>
     </section>
     
