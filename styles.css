@@ -169,16 +169,15 @@ strong{
     height: 20em;
     border: .1em solid transparent; 
     border-radius: 20%;
-    background-image: linear-gradient(to bottom, rgb(12, 204, 185),rgb(7, 79, 72)); /* Define el degradado */
-    border-image: linear-gradient(to bottom, rgb(12, 204, 185), rgb(7, 79, 72)) 1; /* Aplica el degradado al borde */
+    background-image: linear-gradient(to bottom, rgb(12, 204, 185)); /* Define el degradado */
 }
 
-/********************** Estilos para la seccion skills y hobbies **********************/
-#skills, #hobbies, #formacion, body {
+/********************** Estilos para la seccion skills **********************/
+#skills, #formacion, body {
     background-color: #1f1f1f;
 }
 
-#h2_skills, #h2_hobbies{
+#h2_skills{
     text-align: center;
     color: #63f0d1;
     font-family: 'Fira Sans', sans-serif;
@@ -197,17 +196,7 @@ strong{
     border-radius: 2px;
 }
 
-#h2_hobbies::after {
-    content: "";
-    display: block;
-    width: 6em;
-    height: .1em;
-    background-color: #63f0d1; 
-    margin: 0.9rem auto 0;
-    border-radius: 2px;
-}
-
-#section-logos-skills, #section-logos-hobbies{
+#section-logos-skills{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -548,7 +537,7 @@ footer {
     color: #00bfa6;
 }
 @media (max-width: 1050px) {
-    #contacto, #aboutme, #skills, #hobbies, #formacion, #proyectos, footer, nav {
+    #contacto, #aboutme, #skills, #formacion, #proyectos, footer, nav {
         font-size: 0.8em;
     }
     
@@ -579,7 +568,7 @@ footer {
     }
 }
 @media (max-width: 768px) {
-    #contacto, #aboutme, #skills, #hobbies, #formacion, #proyectos, footer, nav {
+    #contacto, #aboutme, #skills, #formacion, #proyectos, footer, nav {
         font-size: 0.7em;
     }
     nav {
@@ -606,17 +595,17 @@ footer {
     display: none;    
     }
 
-    #h2_skills, #h2_hobbies{
+    #h2_skills{
         font-size: 2rem;
         padding-top: 1em;
         margin-bottom: 0em;
     }
 }
 @media (max-width: 650px) {
-    #contacto, #aboutme, #skills, #hobbies, #formacion, #proyectos, footer, nav {
+    #contacto, #aboutme, #skills, #formacion, #proyectos, footer, nav {
         font-size: 0.6em;
     }
-    #h2_skills, #h2_hobbies{
+    #h2_skills{
         font-size: 1rem;
         }
     #section-formacion {
@@ -632,7 +621,7 @@ footer {
     }
 }
 @media (max-width: 385px) {
-    #contacto, #aboutme, #skills, #hobbies, #formacion, #proyectos, footer, nav {
+    #contacto, #aboutme, #skills, #formacion, #proyectos, footer, nav {
         font-size: 0.5em;
     }
     .proyecto-card {
